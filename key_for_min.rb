@@ -3,9 +3,10 @@
 
 def key_for_min_value(name_hash)
   min = name_hash[0]
-  name_hash.collect do |key, value|
-    if value < min 
-      winner_key = key[value]
+  winner_key = ""
+  name_hash.collect do |d_key, d_value|
+    if d_value < min 
+      winner_key = d_key[d_value]
     end
   end
  
