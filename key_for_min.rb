@@ -6,6 +6,7 @@ def key_for_min_value(name_hash)
   winner_key = ""
   name_hash.collect do |d_key, d_value|
     if d_value < min 
+      min = d_value
       winner_key = d_key[d_value]
     end
   end
