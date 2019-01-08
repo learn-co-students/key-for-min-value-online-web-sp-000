@@ -1,20 +1,27 @@
 # prereqs: iterators, hashes, conditional logic
 # Given a hash with numeric values, return the key for the smallest value
 require 'pry'
-name_hash = {adam: 1, bill: 2, carly: 3}
+# name_hash = {adam: 1, bill: 2, carly: 3}
 
 def key_for_min_value(name_hash)
-  
-  def key_for_min_value(name_hash)
-  # define two variables for comparison, one for current lowest key and another for current lowest value.
+
+current_lowest_key = nil
+current_lowest_value = 50000
+
   name_hash.each do |key, value|
-    if #value is less than the current lowest value
-      #assign value to lowest value variable
-      #assign key to lowest key variable
+    if value < current_lowest_value 
+      current_lowest_value = value
+      current_lowest_key = key 
     end
   end
-  #return the lowest key variable
+ current_lowest_key
 end
+# key_for_min_value(name_hash)
+
+
+
+
+=begin 
 name_hash.inject do |key_value1a, key_value2a|  ## not sure when booleans are pass nil yet I can create a hash from the array 
 
    key_value1b = {key_value1a[0] => key_value1a[1]}
@@ -44,7 +51,7 @@ end
 end 
   key_for_min_value(name_hash) 
               
-=begin   
+  
   
 
   key1a = {key1 => value1}
