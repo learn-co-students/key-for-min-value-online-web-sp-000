@@ -12,6 +12,7 @@ def key_for_min_value(hash)
       if value < acc
         acc = value
         name = key
+      end
     end
   end
   name
