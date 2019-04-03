@@ -4,16 +4,12 @@ require 'pry'
 def key_for_min_value(name_hash)
   i = 0
   key = nil
-  vmin = 10000000
+  vmin = nil
   if !name_hash.empty?
     name_hash.each do |name, v|
-      if i == 0
+      if key.nil?|| v < vmin
         vmin = v
         key = name
-        i += 1
-      elsif v < vmin
-        key = name
-        vmin = v
       end
     end
   end
