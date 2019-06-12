@@ -8,14 +8,14 @@ def key_for_min_value(name_hash)
     nil
   else
     name_hash.collect do |key, value|
-      if smallest == nil
-        value = smallest
+      if nil == smallest
+        smallest = value
+        smallkey = key
       elsif value < smallest
         smallest = value
         smallkey = key
       end
     end
-    smolv
+    smallkey
   end
-  smolv
 end
