@@ -6,9 +6,17 @@
 
 
 def key_for_min_value(name_hash)
+  lowest_value = nil
+  lowest_key = nil
   name_hash.find do |key, value|
-  if value < 2
-  return key
-  end
+   lowest_value = value
+   lowest_key = key
+   if lowest_value 
+  return lowest_key
+  
 end
 end
+
+#What could we use to compare each value to?
+#Should we maybe create some variables?
+#What if you create two variables to keep track of the lowest key, and lowest value? set them to something like nil - then when you loop over the hash, you can use those variables to compare with whatever key/value you're on now. If the new one is lower, assign it to that variable
