@@ -6,15 +6,14 @@
 
 
 def key_for_min_value(name_hash)
-  lowest_value = nil
-  lowest_key = nil
-  name_hash.find do |key, value|
-   lowest_value = value
-   lowest_key = key
-   if lowest_value 
-  return lowest_key
+  lowest_value = 10
+  lowest_key = ""
+  name_hash.collect do |key, value|
+    if value == lowest_value
   
+
 end
+  lowest_key
 end
 
 #What could we use to compare each value to?
