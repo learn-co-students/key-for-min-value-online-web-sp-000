@@ -13,3 +13,5 @@ name_hash.collect do |key, value|
 end
 low_key
 end
+
+#if the low_value is nil or larger than value we replace low_value with value and low_key with key then once the loop is finished we return the low_key
