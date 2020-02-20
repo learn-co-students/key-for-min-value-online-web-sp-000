@@ -8,9 +8,9 @@
 require "pry"
 def key_for_min_value(name_hash)
   min_name = nil
-  min_number = ""
+  min_number = nil
   name_hash.each do |name, number|
-    if min_number == ""
+    if min_number == nil
       min_number = number
       min_name = name
     elsif min_number > number
