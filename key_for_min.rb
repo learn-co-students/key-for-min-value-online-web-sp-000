@@ -13,7 +13,6 @@ def key_for_min_value(name_hash)
     elsif number < key_min
       key_min = number
       key_value = item
-      count += 1
     end
   end
   return key_value
