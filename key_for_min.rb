@@ -17,8 +17,8 @@ def key_for_min_value(name_hash)
   if nameofmin == "" #indicate
     return nil
   else
+    return nameofmin
     binding.pry
-    return name_hash[nameofmin]
   end
 end
 
