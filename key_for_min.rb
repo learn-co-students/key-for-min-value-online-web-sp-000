@@ -1,17 +1,13 @@
 def key_for_min_value(name_hash)
 	min = nil
-	pair = {}
+	key_for_min = nil
 
 	name_hash.each do |name, num|
-		min = min ||= num
-
-		if num <= min
+		if num <= (min ||= num)
 			min = num
-			pair = {name => num}
+			key_for_min = name
 		end
 	end
 
-	name_hash.map do |name, num|
-		num == min ? name : nil
-	end .compact[0]
+	key_for_min
 end
